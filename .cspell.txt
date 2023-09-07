@@ -1,0 +1,3 @@
+cocoapods
+commitlint
+preinstall
