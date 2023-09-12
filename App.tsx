@@ -1,68 +1,32 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import React from 'react'
-import type { PropsWithChildren } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import {
   SafeAreaView,
   ScrollView,
   StatusBar,
-  StyleSheet,
   Text,
   useColorScheme,
-  View
+  View,
+  Animated
 } from 'react-native'
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions
-} from 'react-native/Libraries/NewAppScreen'
+import { Colors, Header } from 'react-native/Libraries/NewAppScreen'
 
-type SectionProps = PropsWithChildren<{
-  title: string
-}>
-
-function Section({ children, title }: SectionProps): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark'
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black
-          }
-        ]}
-      >
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark
-          }
-        ]}
-      >
-        {children}
-      </Text>
-    </View>
-  )
-}
-
-function App(): JSX.Element {
+export default function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark'
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter
   }
+  const fadeAnim = useRef(new Animated.Value(0)).current
+  const [isTouch, setIsTouch] = useState(false)
+
+  useEffect(() => {
+    Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 10000,
+      useNativeDriver: true
+    }).start()
+  }, [fadeAnim])
 
   return (
     <SafeAreaView style={backgroundStyle}>
@@ -82,29 +46,27 @@ function App(): JSX.Element {
         >
           <Text>Hello World</Text>
           <Text style={{ color: 'white' }}>2771</Text>
+          <Animated.View
+            style={{
+              backgroundColor: 'white',
+              width: '100%',
+              height: 200,
+              borderRadius: 20,
+              shadowColor: '#000',
+              transform: isTouch ? [{ scale: 0.9 }] : [{ scale: 1 }],
+              opacity: fadeAnim
+            }}
+            onTouchStart={() => {
+              setIsTouch(true)
+              fadeAnim.setValue(0)
+            }}
+            onTouchEnd={() => {
+              setIsTouch(false)
+              fadeAnim.setValue(1)
+            }}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
   )
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600'
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400'
-  },
-  highlight: {
-    fontWeight: '700'
-  }
-})
-
-export default App

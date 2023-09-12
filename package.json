@@ -27,6 +27,7 @@
     "@babel/core": "^7.22.17",
     "@babel/preset-env": "^7.22.15",
     "@babel/runtime": "^7.22.15",
+    "@brucesong/eslint-config-react-native": "^0.0.2",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@react-native/metro-config": "^0.72.11",
