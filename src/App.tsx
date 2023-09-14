@@ -10,6 +10,7 @@ import React from 'react'
 
 import HomePage from '@/pages'
 import { TabBar } from '@/components'
+import { TimeUtils } from '@/utils'
 
 export default function App(): JSX.Element {
   // Dark Mode
@@ -34,6 +35,7 @@ export default function App(): JSX.Element {
           }}
         >
           <Text>Hello, React Native!</Text>
+          <Text>{TimeUtils.formatTime('2023-01-01 08:00:30', 'LL')}</Text>
           <TabBar />
           <HomePage />
         </View>
