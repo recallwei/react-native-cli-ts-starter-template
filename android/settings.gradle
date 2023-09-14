@@ -1,4 +1,4 @@
-rootProject.name = 'react-native-cli-ts-starter-template'
+rootProject.name = 'ReactNativeDemoApp'
 apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
 include ':app'
 includeBuild('../node_modules/@react-native/gradle-plugin')

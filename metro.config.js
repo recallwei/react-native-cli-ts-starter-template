@@ -9,7 +9,7 @@ const MetroSymlinksResolver = require('@rnx-kit/metro-resolver-symlinks')
  */
 const config = {
   resolver: {
-    resolveRequest: MetroSymlinksResolver()
+    resolveRequest: MetroSymlinksResolver() // NOTE: Resolve pnpm symlinks
   }
 }
 
