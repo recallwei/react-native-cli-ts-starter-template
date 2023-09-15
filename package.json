@@ -10,20 +10,22 @@
     "lint": "eslint .",
     "test": "jest",
     "env:check": "react-native doctor",
+    "pod:install": "npx pod-install",
     "cspell:check": "cspell \"**\"",
     "eslint:check": "eslint \"**/*.{ts,tsx,js,jsx,vue}\" --color",
     "eslint:fix": "pnpm eslint:check --fix",
     "prettier:check": "prettier --check --ignore-unknown .",
     "prettier:fix": "prettier --write --ignore-unknown .",
     "preinstall": "npx only-allow pnpm",
-    "postinstall": "npx pod-install",
     "prepare": "husky install"
   },
   "dependencies": {
     "@react-native-community/cli-platform-android": "^11.3.8",
     "@react-native/gradle-plugin": "^0.72.11",
+    "@react-navigation/bottom-tabs": "^6.5.8",
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
+    "@tanstack/react-query": "^4.35.3",
     "axios": "^1.5.0",
     "dayjs": "^1.11.9",
     "react": "18.2.0",
@@ -32,7 +34,7 @@
     "react-native-screens": "^3.25.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.17",
+    "@babel/core": "^7.22.19",
     "@babel/preset-env": "^7.22.15",
     "@babel/runtime": "^7.22.15",
     "@brucesong/eslint-config-react-native": "^0.0.6",

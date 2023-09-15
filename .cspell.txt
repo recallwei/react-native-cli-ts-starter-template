@@ -1,4 +1,6 @@
 brucesong
 cocoapods
 commitlint
+tanstack
 preinstall
+Zustand
