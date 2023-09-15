@@ -10,13 +10,14 @@ import {
 
 import { TimeUtils } from '@/utils'
 import { useNavigation } from '@react-navigation/native'
+import { GlobalStyles } from '@/styles'
 
 interface NavItem {
   label: string
   screen: string
 }
 
-export default function Home() {
+export default function HomeScreen() {
   const isDarkMode = useColorScheme() === 'dark'
   const { navigate } = useNavigation()
   const [textValue, setTextValue] = useState('')
@@ -25,6 +26,14 @@ export default function Home() {
     {
       label: 'React Query',
       screen: 'ReactQuery'
+    },
+    {
+      label: 'UI Framework',
+      screen: 'UI'
+    },
+    {
+      label: 'Global State Management',
+      screen: 'Zustand'
     },
     {
       label: 'Chart',
@@ -38,15 +47,18 @@ export default function Home() {
         backgroundColor: isDarkMode ? '#000' : '#fff'
       }}
     >
-      <Text>Hello, React Native!</Text>
-      <Text>{TimeUtils.formatTime('2023-01-01 08:00:30', 'LL')}</Text>
+      <Text style={GlobalStyles.text}>Hello, React Native!</Text>
+      <Text style={GlobalStyles.text}>
+        {TimeUtils.formatTime('2023-01-01 08:00:30', 'LL')}
+      </Text>
       <View>
-        <Text>Home Page</Text>
-        <Text>Welcome to use React Native!</Text>
+        <Text style={GlobalStyles.text}>Home Page</Text>
+        <Text style={GlobalStyles.text}>Welcome to use React Native!</Text>
         <TextInput
           placeholder="Please enter your content."
           value={textValue}
           onChangeText={(text) => setTextValue(text)}
+          style={GlobalStyles.text}
         />
         <Text>{textValue}</Text>
         <Animated.Image
@@ -58,7 +70,12 @@ export default function Home() {
         <FlatList
           data={navList}
           renderItem={({ item }) => (
-            <Text onPress={() => navigate(item.screen)}>{item.label}</Text>
+            <Text
+              onPress={() => navigate(item.screen)}
+              style={GlobalStyles.text}
+            >
+              {item.label}
+            </Text>
           )}
           keyExtractor={(item) => item.screen}
         />

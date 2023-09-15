@@ -2,6 +2,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import { Text } from 'react-native'
+import { GlobalStyles } from '@/styles'
 import { Tab4Stack, Tab1Stack, Tab2Stack, Tab3Stack } from '@/router'
 
 const Tab = createBottomTabNavigator()
@@ -14,9 +15,7 @@ export default function App(): JSX.Element {
       <NavigationContainer>
         <Tab.Navigator
           screenOptions={{
-            tabBarLabelStyle: {
-              fontSize: 15
-            }
+            tabBarLabelStyle: GlobalStyles.tabBarLabel
           }}
         >
           <Tab.Screen

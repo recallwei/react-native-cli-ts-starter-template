@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
+import { GlobalStyles } from '@/styles'
 import HomeScreen from '@/pages'
 import ReactQueryScreen from '@/pages/ReactQuery'
 
@@ -13,7 +14,8 @@ export default function Tab1Stack() {
         headerTintColor: 'white',
         headerStyle: {
           backgroundColor: '#0078d7'
-        }
+        },
+        headerTitleStyle: GlobalStyles.headerTitle
       }}
     >
       <Stack.Screen

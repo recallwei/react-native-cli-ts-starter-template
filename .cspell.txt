@@ -1,6 +1,8 @@
 brucesong
 cocoapods
 commitlint
+dosis
+noto
 tanstack
 preinstall
 Zustand

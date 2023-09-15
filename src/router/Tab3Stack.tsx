@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
+import { GlobalStyles } from '@/styles'
 import ZustandScreen from '@/pages/Zustand'
 
 const Stack = createNativeStackNavigator()
@@ -12,7 +13,8 @@ export default function Tab3Stack() {
         headerTintColor: 'white',
         headerStyle: {
           backgroundColor: '#0078d7'
-        }
+        },
+        headerTitleStyle: GlobalStyles.headerTitle
       }}
     >
       <Stack.Screen
