@@ -55,7 +55,8 @@ export default function ChartsScreen(): React.JSX.Element {
         flexDirection: 'row',
         justifyContent: 'center',
         marginVertical: 20,
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        columnGap: 4
       }}
     >
       {data.map((item) => (
@@ -63,9 +64,8 @@ export default function ChartsScreen(): React.JSX.Element {
           style={{
             flexDirection: 'row',
             alignItems: 'center',
-            width: 120,
-            marginRight: 20,
-            marginBottom: 4
+            marginBottom: 4,
+            minWidth: '40%'
           }}
           key={item.label}
         >
@@ -186,7 +186,8 @@ export default function ChartsScreen(): React.JSX.Element {
         style={{
           padding: 20,
           alignItems: 'center',
-          marginBottom: 30
+          marginBottom: 30,
+          width: '100%'
         }}
       >
         <PieChart
