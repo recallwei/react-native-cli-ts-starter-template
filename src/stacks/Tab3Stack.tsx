@@ -1,14 +1,14 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import { GlobalStyles } from '@/styles'
-import ChartPage from '@/pages/Chart'
+import ZustandScreen from '@/screens/Zustand'
 
 const Stack = createNativeStackNavigator()
 
-export default function Tab2Stack() {
+export default function Tab3Stack() {
   return (
     <Stack.Navigator
-      initialRouteName="Chart"
+      initialRouteName="Zustand"
       screenOptions={{
         headerTintColor: 'white',
         headerStyle: {
@@ -18,10 +18,10 @@ export default function Tab2Stack() {
       }}
     >
       <Stack.Screen
-        name="Chart"
-        component={ChartPage}
+        name="Zustand"
+        component={ZustandScreen}
         options={{
-          title: 'Chart'
+          title: 'Zustand'
         }}
       />
     </Stack.Navigator>

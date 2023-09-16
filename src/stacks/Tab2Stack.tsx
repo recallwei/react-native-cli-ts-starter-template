@@ -1,15 +1,14 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import { GlobalStyles } from '@/styles'
-import HomeScreen from '@/pages'
-import ReactQueryScreen from '@/pages/ReactQuery'
+import ChartsScreen from '@/screens/Charts'
 
 const Stack = createNativeStackNavigator()
 
-export default function Tab1Stack() {
+export default function Tab2Stack() {
   return (
     <Stack.Navigator
-      initialRouteName="Home"
+      initialRouteName="Charts"
       screenOptions={{
         headerTintColor: 'white',
         headerStyle: {
@@ -19,17 +18,10 @@ export default function Tab1Stack() {
       }}
     >
       <Stack.Screen
-        name="Home"
-        component={HomeScreen}
+        name="Charts"
+        component={ChartsScreen}
         options={{
-          title: 'Home'
-        }}
-      />
-      <Stack.Screen
-        name="ReactQuery"
-        component={ReactQueryScreen}
-        options={{
-          title: 'React Query'
+          title: 'Charts'
         }}
       />
     </Stack.Navigator>

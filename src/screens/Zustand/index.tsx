@@ -1,9 +1,11 @@
 import { View, Text } from 'react-native'
 
+import { TextStyles } from '@/styles'
+
 export default function ZustandScreen(): React.JSX.Element {
   return (
     <View>
-      <Text>Zustand</Text>
+      <Text style={TextStyles.base}>Zustand</Text>
     </View>
   )
 }

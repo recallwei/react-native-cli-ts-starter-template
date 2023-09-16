@@ -2,8 +2,9 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import { Text } from 'react-native'
+
 import { GlobalStyles } from '@/styles'
-import { Tab4Stack, Tab1Stack, Tab2Stack, Tab3Stack } from '@/router'
+import { Tab4Stack, Tab1Stack, Tab2Stack, Tab3Stack } from '@/stacks'
 
 const Tab = createBottomTabNavigator()
 
@@ -31,7 +32,7 @@ export default function App(): JSX.Element {
             name="Tab2"
             component={Tab2Stack}
             options={{
-              tabBarLabel: 'Statistic',
+              tabBarLabel: 'Charts',
               headerShown: false,
               tabBarBadge: 1
             }}
@@ -40,7 +41,7 @@ export default function App(): JSX.Element {
             name="Tab3"
             component={Tab3Stack}
             options={{
-              tabBarLabel: 'Array',
+              tabBarLabel: 'Zustand',
               headerShown: false
             }}
           />

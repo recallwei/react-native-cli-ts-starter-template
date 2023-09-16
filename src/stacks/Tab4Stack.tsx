@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import { GlobalStyles } from '@/styles'
-import UIScreen from '@/pages/UI'
+import UIScreen from '@/screens/UI'
 
 const Stack = createNativeStackNavigator()
 
