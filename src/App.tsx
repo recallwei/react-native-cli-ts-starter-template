@@ -1,10 +1,11 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
-import { Text } from 'react-native'
+import { SvgUri } from 'react-native-svg'
 
 import { GlobalStyles } from '@/styles'
 import { Tab4Stack, Tab1Stack, Tab2Stack, Tab3Stack } from '@/stacks'
+import { View } from 'react-native'
 
 const Tab = createBottomTabNavigator()
 
@@ -24,7 +25,16 @@ export default function App(): JSX.Element {
             component={Tab1Stack}
             options={{
               tabBarLabel: 'Home',
-              tabBarIcon: () => <Text>Icon</Text>,
+              tabBarIcon: () => (
+                <View>
+                  <SvgUri
+                    width="20"
+                    height="20"
+                    color="#000"
+                    uri="https://api.iconify.design/line-md:home-md.svg"
+                  />
+                </View>
+              ),
               headerShown: false
             }}
           />

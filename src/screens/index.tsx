@@ -50,22 +50,18 @@ export default function HomeScreen() {
         {TimeUtils.formatTime('2023-01-01 08:00:30', 'LL')}
       </Text>
 
-      <View>
-        <Text style={TextStyles.base}>Welcome to use React Native!</Text>
-
-        <FlatList
-          data={navList}
-          renderItem={({ item }) => (
-            <Text
-              onPress={() => navigate(item.screen)}
-              style={TextStyles.base}
-            >
-              {item.label}
-            </Text>
-          )}
-          keyExtractor={(item) => item.screen}
-        />
-      </View>
+      <FlatList
+        data={navList}
+        renderItem={({ item }) => (
+          <Text
+            onPress={() => navigate(item.screen)}
+            style={TextStyles.base}
+          >
+            {item.label}
+          </Text>
+        )}
+        keyExtractor={(item) => item.screen}
+      />
     </View>
   )
 }
