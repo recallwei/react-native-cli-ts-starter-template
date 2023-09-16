@@ -51,7 +51,6 @@ export default function HomeScreen() {
       </Text>
 
       <View>
-        <Text style={TextStyles.base}>Home Page</Text>
         <Text style={TextStyles.base}>Welcome to use React Native!</Text>
 
         <FlatList

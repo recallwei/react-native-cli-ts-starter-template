@@ -16,29 +16,29 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1D18BDA2982643CD9C6CF708 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF0C49AEB99142DC8892ED0E /* NotoSans-Italic.ttf */; };
+		20941B7AB3D645EEA840CC3A /* Dosis-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA06A393E4EF408BB120A80E /* Dosis-Medium.ttf */; };
+		46C62CC7B925471D8EADD024 /* Dosis-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74AB5FD6AF3148A68CD9F57C /* Dosis-ExtraLight.ttf */; };
 		4876FA7C66E242269621D38E /* NotoSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 983DBE4C85954A95A4EFD511 /* NotoSans-Thin.ttf */; };
 		530F57A650DA4E7E9F360B33 /* NotoSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F82CF9D38D5E4E36ADDA956A /* NotoSans-Medium.ttf */; };
+		561D718FFBED44738EBCFC86 /* Dosis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2BFCA5951BF4CA7A1B743E7 /* Dosis-Light.ttf */; };
 		5876D718754C4120BD03A7A6 /* NotoSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0219F7DF68834EE79CB15CB1 /* NotoSans-SemiBold.ttf */; };
 		67B50B3A31224FEBAAA9DB4D /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0270E01731F442588E51930 /* NotoSans-Bold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-ReactNativeDemoApp-ReactNativeDemoAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ReactNativeDemoApp-ReactNativeDemoAppTests.a */; };
 		777728430BDE4139BC90A780 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C96ED37CC5204A96AA369E99 /* NotoSans-BoldItalic.ttf */; };
+		7A1CB71208F44038900131F5 /* Dosis-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D108D1000AB4D3F974A9DB8 /* Dosis-ExtraBold.ttf */; };
 		7D667ABBB1EB4C2299D04D3B /* NotoSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA95077350134239B45D8DF4 /* NotoSans-ThinItalic.ttf */; };
+		7F61D6FB15C54760A35EFB16 /* Dosis-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 161ADD1CCCE04A11B6CCB946 /* Dosis-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		85E7B5F262CF4D08AD2A9E9C /* NotoSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61D35C0D1B444E5387A169A1 /* NotoSans-LightItalic.ttf */; };
+		A4109233006A4E188C712A53 /* Dosis-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BDCAA9229BB49DEBE1C3D47 /* Dosis-SemiBold.ttf */; };
 		B243D691E0ED4806BA1E9C99 /* NotoSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01BA1AEF87904662B51B8620 /* NotoSans-Light.ttf */; };
 		B25B9EE49E5443ADA0D13FC3 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73FC1645193240D3A8948E70 /* NotoSans-Regular.ttf */; };
+		B702CBE29C274A6CA8D0B885 /* Dosis-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACFBF582F3E44AA3B4766BA0 /* Dosis-Bold.ttf */; };
 		BAEEC9B2EE9F4EC4BE2424A4 /* NotoSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B447968F42B94C29AFE6B36F /* NotoSans-ExtraLight.ttf */; };
 		BE4A38E770E94986B1AE62C5 /* NotoSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A38B070AD6A40D9BE609676 /* NotoSans-ExtraBoldItalic.ttf */; };
 		CCCBA4625F7E4554B5BEC953 /* NotoSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 797C72360E0141EC90E7F76A /* NotoSans-ExtraBold.ttf */; };
 		D254EA09AA1F423EABD9C40E /* NotoSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF3201A2758240819E6D95DB /* NotoSans-ExtraLightItalic.ttf */; };
 		E381A23B1D8843C79285F1C4 /* NotoSans-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 039F7B86B10947618C23214F /* NotoSans-BlackItalic.ttf */; };
-		B702CBE29C274A6CA8D0B885 /* Dosis-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACFBF582F3E44AA3B4766BA0 /* Dosis-Bold.ttf */; };
-		7A1CB71208F44038900131F5 /* Dosis-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D108D1000AB4D3F974A9DB8 /* Dosis-ExtraBold.ttf */; };
-		46C62CC7B925471D8EADD024 /* Dosis-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74AB5FD6AF3148A68CD9F57C /* Dosis-ExtraLight.ttf */; };
-		561D718FFBED44738EBCFC86 /* Dosis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2BFCA5951BF4CA7A1B743E7 /* Dosis-Light.ttf */; };
-		20941B7AB3D645EEA840CC3A /* Dosis-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA06A393E4EF408BB120A80E /* Dosis-Medium.ttf */; };
-		7F61D6FB15C54760A35EFB16 /* Dosis-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 161ADD1CCCE04A11B6CCB946 /* Dosis-Regular.ttf */; };
-		A4109233006A4E188C712A53 /* Dosis-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BDCAA9229BB49DEBE1C3D47 /* Dosis-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,10 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ReactNativeDemoApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReactNativeDemoApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ReactNativeDemoApp/main.m; sourceTree = "<group>"; };
+		161ADD1CCCE04A11B6CCB946 /* Dosis-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Regular.ttf"; path = "../assets/fonts/Dosis-Regular.ttf"; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-ReactNativeDemoApp-ReactNativeDemoAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeDemoApp-ReactNativeDemoAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BDCAA9229BB49DEBE1C3D47 /* Dosis-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-SemiBold.ttf"; path = "../assets/fonts/Dosis-SemiBold.ttf"; sourceTree = "<group>"; };
+		2D108D1000AB4D3F974A9DB8 /* Dosis-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-ExtraBold.ttf"; path = "../assets/fonts/Dosis-ExtraBold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-ReactNativeDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeDemoApp/Pods-ReactNativeDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		47E429CAE7A04FD292BD7C68 /* NotoSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-SemiBoldItalic.ttf"; path = "../assets/fonts/NotoSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		53196169F474425384A608F7 /* NotoSans-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-MediumItalic.ttf"; path = "../assets/fonts/NotoSans-MediumItalic.ttf"; sourceTree = "<group>"; };
@@ -74,11 +77,14 @@
 		61D35C0D1B444E5387A169A1 /* NotoSans-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-LightItalic.ttf"; path = "../assets/fonts/NotoSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		6F376456034A403D8A6409EF /* NotoSans-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-Black.ttf"; path = "../assets/fonts/NotoSans-Black.ttf"; sourceTree = "<group>"; };
 		73FC1645193240D3A8948E70 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-Regular.ttf"; path = "../assets/fonts/NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		74AB5FD6AF3148A68CD9F57C /* Dosis-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-ExtraLight.ttf"; path = "../assets/fonts/Dosis-ExtraLight.ttf"; sourceTree = "<group>"; };
 		797C72360E0141EC90E7F76A /* NotoSans-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-ExtraBold.ttf"; path = "../assets/fonts/NotoSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReactNativeDemoApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ReactNativeDemoApp-ReactNativeDemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeDemoApp-ReactNativeDemoAppTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeDemoApp-ReactNativeDemoAppTests/Pods-ReactNativeDemoApp-ReactNativeDemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		8A38B070AD6A40D9BE609676 /* NotoSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-ExtraBoldItalic.ttf"; path = "../assets/fonts/NotoSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		983DBE4C85954A95A4EFD511 /* NotoSans-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-Thin.ttf"; path = "../assets/fonts/NotoSans-Thin.ttf"; sourceTree = "<group>"; };
+		A2BFCA5951BF4CA7A1B743E7 /* Dosis-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Light.ttf"; path = "../assets/fonts/Dosis-Light.ttf"; sourceTree = "<group>"; };
+		ACFBF582F3E44AA3B4766BA0 /* Dosis-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Bold.ttf"; path = "../assets/fonts/Dosis-Bold.ttf"; sourceTree = "<group>"; };
 		AF0C49AEB99142DC8892ED0E /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-Italic.ttf"; path = "../assets/fonts/NotoSans-Italic.ttf"; sourceTree = "<group>"; };
 		B447968F42B94C29AFE6B36F /* NotoSans-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-ExtraLight.ttf"; path = "../assets/fonts/NotoSans-ExtraLight.ttf"; sourceTree = "<group>"; };
 		BF3201A2758240819E6D95DB /* NotoSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-ExtraLightItalic.ttf"; path = "../assets/fonts/NotoSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
@@ -86,14 +92,8 @@
 		E0270E01731F442588E51930 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-Bold.ttf"; path = "../assets/fonts/NotoSans-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F82CF9D38D5E4E36ADDA956A /* NotoSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-Medium.ttf"; path = "../assets/fonts/NotoSans-Medium.ttf"; sourceTree = "<group>"; };
+		FA06A393E4EF408BB120A80E /* Dosis-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dosis-Medium.ttf"; path = "../assets/fonts/Dosis-Medium.ttf"; sourceTree = "<group>"; };
 		FA95077350134239B45D8DF4 /* NotoSans-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-ThinItalic.ttf"; path = "../assets/fonts/NotoSans-ThinItalic.ttf"; sourceTree = "<group>"; };
-		ACFBF582F3E44AA3B4766BA0 /* Dosis-Bold.ttf */ = {isa = PBXFileReference; name = "Dosis-Bold.ttf"; path = "../assets/fonts/Dosis-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2D108D1000AB4D3F974A9DB8 /* Dosis-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Dosis-ExtraBold.ttf"; path = "../assets/fonts/Dosis-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		74AB5FD6AF3148A68CD9F57C /* Dosis-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Dosis-ExtraLight.ttf"; path = "../assets/fonts/Dosis-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A2BFCA5951BF4CA7A1B743E7 /* Dosis-Light.ttf */ = {isa = PBXFileReference; name = "Dosis-Light.ttf"; path = "../assets/fonts/Dosis-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FA06A393E4EF408BB120A80E /* Dosis-Medium.ttf */ = {isa = PBXFileReference; name = "Dosis-Medium.ttf"; path = "../assets/fonts/Dosis-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		161ADD1CCCE04A11B6CCB946 /* Dosis-Regular.ttf */ = {isa = PBXFileReference; name = "Dosis-Regular.ttf"; path = "../assets/fonts/Dosis-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1BDCAA9229BB49DEBE1C3D47 /* Dosis-SemiBold.ttf */ = {isa = PBXFileReference; name = "Dosis-SemiBold.ttf"; path = "../assets/fonts/Dosis-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

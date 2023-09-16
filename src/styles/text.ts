@@ -1,10 +1,16 @@
 import { StyleSheet } from 'react-native'
+import { primaryFontFamily, secondaryFontFamily } from './variants'
 
 export const TextStyles = StyleSheet.create({
   base: {
     fontSize: 18,
-    fontFamily: 'Dosis-Regular'
+    fontFamily: `${primaryFontFamily}-Regular`
   },
+  secondaryBase: {
+    fontSize: 18,
+    fontFamily: `${secondaryFontFamily}-Regular`
+  },
+  // Font Size
   sm: {
     fontSize: 16
   },
@@ -14,11 +20,37 @@ export const TextStyles = StyleSheet.create({
   lg: {
     fontSize: 20
   },
+  xl: {
+    fontSize: 22
+  },
+  // Font Family
   notoSans: {
     fontFamily: 'NotoSans-Regular'
   },
   dosis: {
     fontFamily: 'Dosis-Regular'
+  },
+  // Font Weight
+  extraLight: {
+    fontFamily: `${primaryFontFamily}-ExtraLight`
+  },
+  light: {
+    fontFamily: `${primaryFontFamily}-Light`
+  },
+  regular: {
+    fontFamily: `${primaryFontFamily}-Regular`
+  },
+  medium: {
+    fontFamily: `${primaryFontFamily}-Medium`
+  },
+  semiBold: {
+    fontFamily: `${primaryFontFamily}-SemiBold`
+  },
+  bold: {
+    fontFamily: `${primaryFontFamily}-Bold`
+  },
+  extraBold: {
+    fontFamily: `${primaryFontFamily}-ExtraBold`
   }
 })
 

@@ -32,7 +32,7 @@ export default function App(): JSX.Element {
             name="Tab2"
             component={Tab2Stack}
             options={{
-              tabBarLabel: 'Charts',
+              tabBarLabel: 'Core',
               headerShown: false,
               tabBarBadge: 1
             }}
@@ -41,7 +41,7 @@ export default function App(): JSX.Element {
             name="Tab3"
             component={Tab3Stack}
             options={{
-              tabBarLabel: 'Zustand',
+              tabBarLabel: 'UI',
               headerShown: false
             }}
           />
