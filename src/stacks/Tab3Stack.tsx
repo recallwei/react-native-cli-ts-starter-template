@@ -1,16 +1,17 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import { GlobalStyles } from '@/styles'
-import ZustandScreen from '@/screens/Zustand'
+import TamaguiUIScreen from '@/screens/TamaguiUI'
 
 const Stack = createNativeStackNavigator()
 
 export default function Tab3Stack() {
   return (
     <Stack.Navigator
-      initialRouteName="Zustand"
+      initialRouteName="TamaguiUI"
       screenOptions={{
         headerTintColor: 'white',
+        headerBackTitleStyle: GlobalStyles.headerBackTitle,
         headerStyle: {
           backgroundColor: '#0078d7'
         },
@@ -18,10 +19,10 @@ export default function Tab3Stack() {
       }}
     >
       <Stack.Screen
-        name="Zustand"
-        component={ZustandScreen}
+        name="TamaguiUI"
+        component={TamaguiUIScreen}
         options={{
-          title: 'Zustand'
+          title: 'Tamagui UI'
         }}
       />
     </Stack.Navigator>

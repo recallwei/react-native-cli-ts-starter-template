@@ -6,6 +6,10 @@ export const GlobalStyles = StyleSheet.create({
     fontSize: 20,
     fontFamily: 'Dosis-Bold'
   },
+  headerBackTitle: {
+    fontSize: 18,
+    fontFamily: 'Dosis-SemiBold'
+  },
   // TabBar
   tabBarLabel: {
     fontSize: 16,

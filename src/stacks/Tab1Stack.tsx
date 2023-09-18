@@ -3,7 +3,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import { GlobalStyles } from '@/styles'
 import HomeScreen from '@/screens'
-import ReactQueryScreen from '@/screens/ReactQuery'
 
 const Stack = createNativeStackNavigator()
 
@@ -15,6 +14,7 @@ export default function Tab1Stack() {
       initialRouteName="Home"
       screenOptions={{
         headerTintColor: 'white',
+        headerBackTitleStyle: GlobalStyles.headerBackTitle,
         headerStyle: {
           backgroundColor: '#0078d7'
         },
@@ -29,13 +29,6 @@ export default function Tab1Stack() {
         component={HomeScreen}
         options={{
           title: 'Home'
-        }}
-      />
-      <Stack.Screen
-        name="ReactQuery"
-        component={ReactQueryScreen}
-        options={{
-          title: 'React Query'
         }}
       />
     </Stack.Navigator>

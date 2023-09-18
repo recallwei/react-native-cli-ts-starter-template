@@ -2,7 +2,9 @@ brucesong
 cocoapods
 commitlint
 dosis
+lucide
 noto
 tanstack
+tamagui
 preinstall
 Zustand

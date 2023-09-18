@@ -1,16 +1,17 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import { GlobalStyles } from '@/styles'
-import UIScreen from '@/screens/UI'
+import MenuScreen from '@/screens/Menu'
 
 const Stack = createNativeStackNavigator()
 
 export default function Tab4Stack() {
   return (
     <Stack.Navigator
-      initialRouteName="UI"
+      initialRouteName="Menu"
       screenOptions={{
         headerTintColor: 'white',
+        headerBackTitleStyle: GlobalStyles.headerBackTitle,
         headerStyle: {
           backgroundColor: '#0078d7'
         },
@@ -18,10 +19,10 @@ export default function Tab4Stack() {
       }}
     >
       <Stack.Screen
-        name="UI"
-        component={UIScreen}
+        name="Menu"
+        component={MenuScreen}
         options={{
-          title: 'UI'
+          title: 'Menu'
         }}
       />
     </Stack.Navigator>
