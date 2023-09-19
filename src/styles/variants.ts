@@ -1,2 +1,2 @@
-export const primaryFontFamily = 'Dosis'
-export const secondaryFontFamily = 'NotoSans'
+export const primaryFontFamily = 'NotoSans'
+export const secondaryFontFamily = 'Dosis'

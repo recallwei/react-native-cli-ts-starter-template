@@ -1,13 +1,13 @@
 import { Text, View, FlatList } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
 import { ListItem, YGroup } from 'tamagui'
 import { Star, Moon, Sun, Cloud } from '@tamagui/lucide-icons'
 
-import type { NavigationItem } from '@/types'
+import type { HomeTabScreenProps, NavigationItem } from '@/types'
 import { TextStyles } from '@/styles'
 
-export default function CoreScreen(): React.JSX.Element {
-  const { navigate } = useNavigation()
+export default function CoreScreen({
+  navigation
+}: HomeTabScreenProps<'Core'>): React.JSX.Element {
   const navigationList: NavigationItem[] = [
     {
       label: 'Tamagui UI',
@@ -36,7 +36,7 @@ export default function CoreScreen(): React.JSX.Element {
         data={navigationList}
         renderItem={({ item }) => (
           <Text
-            onPress={() => navigate(item.screen)}
+            onPress={() => navigation.navigate(item.screen)}
             style={TextStyles.base}
           >
             {item.label}

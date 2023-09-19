@@ -15,7 +15,6 @@ export default function HomeScreen() {
           height: 200
         }}
       />
-
       <Text
         style={{
           ...TextStyles.base,

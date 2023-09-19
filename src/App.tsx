@@ -1,87 +1,86 @@
-import { NavigationContainer } from '@react-navigation/native'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { useColorScheme } from 'react-native'
+import {
+  NavigationContainer,
+  useNavigationContainerRef
+} from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { useFlipper } from '@react-navigation/devtools'
+
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import { TamaguiProvider } from 'tamagui'
-import { Home, Menu, Palette, Star } from '@tamagui/lucide-icons'
 
-import { GlobalStyles } from '@/styles'
-import { Tab4Stack, Tab1Stack, Tab2Stack, Tab3Stack } from '@/stacks'
 import config from '../tamagui.config'
+import { GlobalStyles } from '@/styles'
+import { TabBar } from '@/components'
+import {
+  DayjsScreen,
+  ChartsScreen,
+  ZustandScreen,
+  ReactQueryScreen
+} from '@/screens'
 
-const Tab = createBottomTabNavigator()
+const Stack = createNativeStackNavigator()
 
 export default function App(): JSX.Element {
   const queryClient = new QueryClient()
+  const isDarkMode = useColorScheme() === 'dark'
+
+  const navigationRef = useNavigationContainerRef()
+  useFlipper(navigationRef)
 
   return (
     <TamaguiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <NavigationContainer>
-          <Tab.Navigator
-            screenOptions={() => ({
-              headerShown: false,
-              tabBarLabelStyle: GlobalStyles.tabBarLabel,
-              tabBarActiveTintColor: '#0078d7',
-              tabBarInactiveTintColor: 'gray',
-              tabBarIconStyle: {
-                fontSize: 10
+          <Stack.Navigator
+            screenOptions={{
+              headerTintColor: 'white',
+              headerBackTitleStyle: GlobalStyles.headerBackTitle,
+              headerStyle: {
+                backgroundColor: '#0078d7'
+              },
+              headerTitleStyle: GlobalStyles.headerTitle,
+              contentStyle: {
+                backgroundColor: isDarkMode ? '#000' : '#fff'
               }
-            })}
+            }}
           >
-            <Tab.Screen
-              name="Tab1"
-              component={Tab1Stack}
+            <Stack.Screen
+              name="Tabs"
+              component={TabBar}
               options={{
-                tabBarLabel: 'Home',
-                tabBarIcon: ({ color, size }) => (
-                  <Home
-                    color={color}
-                    size={size}
-                  />
-                )
+                headerShown: false
               }}
             />
-            <Tab.Screen
-              name="Tab2"
-              component={Tab2Stack}
+            <Stack.Screen
+              name="ReactQuery"
+              component={ReactQueryScreen}
               options={{
-                tabBarLabel: 'Core',
-                tabBarBadge: 1,
-                tabBarIcon: ({ color, size }) => (
-                  <Star
-                    color={color}
-                    size={size}
-                  />
-                )
+                title: 'React Query'
               }}
             />
-            <Tab.Screen
-              name="Tab3"
-              component={Tab3Stack}
+            <Stack.Screen
+              name="Zustand"
+              component={ZustandScreen}
               options={{
-                tabBarLabel: 'UI',
-                tabBarIcon: ({ color, size }) => (
-                  <Palette
-                    color={color}
-                    size={size}
-                  />
-                )
+                title: 'Zustand'
               }}
             />
-            <Tab.Screen
-              name="Tab4"
-              component={Tab4Stack}
+            <Stack.Screen
+              name="Charts"
+              component={ChartsScreen}
               options={{
-                tabBarLabel: 'Menu',
-                tabBarIcon: ({ color, size }) => (
-                  <Menu
-                    color={color}
-                    size={size}
-                  />
-                )
+                title: 'Charts'
               }}
             />
-          </Tab.Navigator>
+            <Stack.Screen
+              name="Dayjs"
+              component={DayjsScreen}
+              options={{
+                title: 'day.js'
+              }}
+            />
+          </Stack.Navigator>
         </NavigationContainer>
       </QueryClientProvider>
     </TamaguiProvider>
