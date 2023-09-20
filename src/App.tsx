@@ -5,7 +5,7 @@ import {
 } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { useFlipper } from '@react-navigation/devtools'
-
+import FlipperAsyncStorage from 'rn-flipper-async-storage-advanced'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import { TamaguiProvider } from 'tamagui'
 
@@ -21,6 +21,7 @@ import {
 } from '@/screens'
 import type { RootStackParamList } from '@/types'
 import './i18n'
+import AsyncStorageScreen from './screens/AsyncStorage'
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
 
@@ -34,6 +35,7 @@ export default function App(): JSX.Element {
   return (
     <TamaguiProvider config={config}>
       <QueryClientProvider client={queryClient}>
+        <FlipperAsyncStorage />
         <NavigationContainer>
           <Stack.Navigator
             screenOptions={{
@@ -74,6 +76,13 @@ export default function App(): JSX.Element {
               component={I18nScreen}
               options={{
                 title: 'i18n'
+              }}
+            />
+            <Stack.Screen
+              name="AsyncStorage"
+              component={AsyncStorageScreen}
+              options={{
+                title: 'Async Storage'
               }}
             />
             <Stack.Screen

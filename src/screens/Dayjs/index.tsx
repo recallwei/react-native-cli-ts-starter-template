@@ -5,7 +5,15 @@ import { TextStyles } from '@/styles'
 
 export default function DayjsScreen(): React.JSX.Element {
   return (
-    <View>
+    <View
+      style={{
+        height: '100%',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingBottom: 100
+      }}
+    >
       <Text
         style={{
           ...TextStyles.base,

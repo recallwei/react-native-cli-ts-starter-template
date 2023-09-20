@@ -26,6 +26,10 @@ export default function CoreScreen({
       screen: 'I18n'
     },
     {
+      label: 'Async Storage',
+      screen: 'AsyncStorage'
+    },
+    {
       label: 'Charts',
       screen: 'Charts'
     },

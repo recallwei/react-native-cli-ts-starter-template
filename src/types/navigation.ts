@@ -12,6 +12,7 @@ export type RootStackParamList = {
   ReactQuery: undefined
   Zustand: undefined
   I18n: undefined
+  AsyncStorage: undefined
   Charts: undefined
   Dayjs: undefined
 }

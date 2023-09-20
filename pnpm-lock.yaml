@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@react-native-async-storage/async-storage':
+    specifier: ^1.19.3
+    version: 1.19.3(react-native@0.72.4)
   '@react-native-community/cli-platform-android':
     specifier: ^11.3.8
     version: 11.3.8
@@ -54,8 +57,8 @@ dependencies:
     specifier: 0.72.4
     version: 0.72.4(@babel/core@7.22.20)(@babel/preset-env@7.22.20)(react@18.2.0)
   react-native-gifted-charts:
-    specifier: ^1.3.7
-    version: 1.3.7(react-native-linear-gradient@2.8.3)(react-native-svg@13.13.0)(react-native@0.72.4)(react@18.2.0)
+    specifier: ^1.3.8
+    version: 1.3.8(react-native-linear-gradient@2.8.3)(react-native-svg@13.13.0)(react-native@0.72.4)(react@18.2.0)
   react-native-linear-gradient:
     specifier: ^2.8.3
     version: 2.8.3(react-native@0.72.4)(react@18.2.0)
@@ -71,6 +74,9 @@ dependencies:
   react-native-svg:
     specifier: ^13.13.0
     version: 13.13.0(react-native@0.72.4)(react@18.2.0)
+  rn-flipper-async-storage-advanced:
+    specifier: ^1.0.5
+    version: 1.0.5(@react-native-async-storage/async-storage@1.19.3)(react-native-flipper@0.212.0)(react@18.2.0)
   tamagui:
     specifier: ^1.68.2
     version: 1.68.2(@types/react@18.2.22)(react-dom@18.2.0)(react-native-web@0.19.8)(react-native@0.72.4)(react@18.2.0)
@@ -2699,6 +2705,15 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
+
+  /@react-native-async-storage/async-storage@1.19.3(react-native@0.72.4):
+    resolution: {integrity: sha512-CwGfoHCWdPOTPS+2fW6YRE1fFBpT9++ahLEroX5hkgwyoQ+TkmjOaUxixdEIoVua9Pz5EF2pGOIJzqOTMWfBlA==}
+    peerDependencies:
+      react-native: ^0.0.0-0 || 0.60 - 0.72 || 1000.0.0
+    dependencies:
+      merge-options: 3.0.4
+      react-native: 0.72.4(@babel/core@7.22.20)(@babel/preset-env@7.22.20)(react@18.2.0)
+    dev: false
 
   /@react-native-community/cli-clean@11.3.6:
     resolution: {integrity: sha512-jOOaeG5ebSXTHweq1NznVJVAFKtTFWL4lWgUXl845bCGX7t1lL8xQNWHKwT8Oh1pGR2CI3cKmRjY4hBg+pEI9g==}
@@ -7322,6 +7337,11 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /is-plain-obj@2.1.0:
+    resolution: {integrity: sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==}
+    engines: {node: '>=8'}
+    dev: false
+
   /is-plain-object@2.0.4:
     resolution: {integrity: sha512-h5PpgXkWitc38BBMYawTYMWJHFZJVnBquFE57xFpjB8pJFiF6gZ+bU+WyI/yqXiFR5mdLsgYNaPe8uao6Uv9Og==}
     engines: {node: '>=0.10.0'}
@@ -8413,6 +8433,13 @@ packages:
       type-fest: 0.18.1
       yargs-parser: 20.2.9
     dev: true
+
+  /merge-options@3.0.4:
+    resolution: {integrity: sha512-2Sug1+knBjkaMsMgf1ctR1Ujx+Ayku4EdJN4Z+C2+JzoeF7A3OZ9KM2GY0CpQS51NR61LTurMJrRKPhSs3ZRTQ==}
+    engines: {node: '>=10'}
+    dependencies:
+      is-plain-obj: 2.1.0
+    dev: false
 
   /merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
@@ -9727,10 +9754,9 @@ packages:
     dependencies:
       react: 18.2.0
       react-native: 0.72.4(@babel/core@7.22.20)(@babel/preset-env@7.22.20)(react@18.2.0)
-    dev: true
 
-  /react-native-gifted-charts@1.3.7(react-native-linear-gradient@2.8.3)(react-native-svg@13.13.0)(react-native@0.72.4)(react@18.2.0):
-    resolution: {integrity: sha512-An6JZJTShtcQE1vqxxBF8pi+AQTAzdths42vJRgQORreFq4QpjFf14LdOd0RpIgu+QkJA9/FXInAjzi2dgWfiA==}
+  /react-native-gifted-charts@1.3.8(react-native-linear-gradient@2.8.3)(react-native-svg@13.13.0)(react-native@0.72.4)(react@18.2.0):
+    resolution: {integrity: sha512-QdqNi7uaveNbWdWGxQrwDF/j+e8ZEnr2209ZkSgTKio0E8KI1XH6ApKjhIjXe4K5OlqN+8atLe6NeCmB18dCiw==}
     peerDependencies:
       react: '*'
       react-native: '*'
@@ -10237,6 +10263,18 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+
+  /rn-flipper-async-storage-advanced@1.0.5(@react-native-async-storage/async-storage@1.19.3)(react-native-flipper@0.212.0)(react@18.2.0):
+    resolution: {integrity: sha512-IW2qXGyf+wgZKNV01li02e7c/DR/NQGIdQZ5CKynhVtl0Od8tO4AS/mZtRjmPbRtqSSGTdOUBSJ4d2JsCVZUPw==}
+    peerDependencies:
+      '@react-native-async-storage/async-storage': ^1.17.12
+      react: ^18.2.0
+      react-native-flipper: '*'
+    dependencies:
+      '@react-native-async-storage/async-storage': 1.19.3(react-native@0.72.4)
+      react: 18.2.0
+      react-native-flipper: 0.212.0(react-native@0.72.4)(react@18.2.0)
+    dev: false
 
   /run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
