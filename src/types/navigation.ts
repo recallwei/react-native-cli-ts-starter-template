@@ -4,7 +4,7 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack'
 
 export interface NavigationItem {
   label: string
-  screen: keyof RootStackParamList
+  screen: keyof (RootStackParamList & HomeTabParamList)
 }
 
 export type BottomTabNavigatorParamList = {
@@ -15,10 +15,7 @@ export type BottomTabNavigatorParamList = {
 }
 
 export type RootStackParamList = {
-  Home: undefined
-  Core: undefined
-  TamaguiUI: undefined
-  Menu: undefined
+  Tabs: undefined
   ReactQuery: undefined
   Zustand: undefined
   Charts: undefined

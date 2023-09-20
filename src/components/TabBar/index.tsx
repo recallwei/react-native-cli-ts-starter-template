@@ -8,11 +8,13 @@ import HomeScreen from '@/tabs/Home'
 import CoreScreen from '@/tabs/Core'
 import TamaguiUIScreen from '@/tabs/TamaguiUI'
 import MenuScreen from '@/tabs/Menu'
+import { useCounterStore } from '@/store'
 
 const Tab = createBottomTabNavigator<BottomTabNavigatorParamList>()
 
 export default function TabBar(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark'
+  const { count } = useCounterStore()
 
   return (
     <Tab.Navigator
@@ -53,7 +55,7 @@ export default function TabBar(): React.JSX.Element {
         component={CoreScreen}
         options={{
           tabBarLabel: 'Core',
-          tabBarBadge: 1,
+          tabBarBadge: count > 0 ? count : undefined,
           tabBarIcon: ({ color, size }) => (
             <Star
               color={color}

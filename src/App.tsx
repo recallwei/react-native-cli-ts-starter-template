@@ -18,8 +18,9 @@ import {
   ZustandScreen,
   ReactQueryScreen
 } from '@/screens'
+import type { RootStackParamList } from '@/types'
 
-const Stack = createNativeStackNavigator()
+const Stack = createNativeStackNavigator<RootStackParamList>()
 
 export default function App(): JSX.Element {
   const queryClient = new QueryClient()
