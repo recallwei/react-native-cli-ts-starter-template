@@ -7,17 +7,11 @@ export interface NavigationItem {
   screen: keyof (RootStackParamList & HomeTabParamList)
 }
 
-export type BottomTabNavigatorParamList = {
-  Home: undefined
-  Core: undefined
-  TamaguiUI: undefined
-  Menu: undefined
-}
-
 export type RootStackParamList = {
   Tabs: undefined
   ReactQuery: undefined
   Zustand: undefined
+  I18n: undefined
   Charts: undefined
   Dayjs: undefined
 }

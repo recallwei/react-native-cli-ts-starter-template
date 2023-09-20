@@ -16,9 +16,11 @@ import {
   DayjsScreen,
   ChartsScreen,
   ZustandScreen,
-  ReactQueryScreen
+  ReactQueryScreen,
+  I18nScreen
 } from '@/screens'
 import type { RootStackParamList } from '@/types'
+import './i18n'
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
 
@@ -65,6 +67,13 @@ export default function App(): JSX.Element {
               component={ZustandScreen}
               options={{
                 title: 'Zustand'
+              }}
+            />
+            <Stack.Screen
+              name="I18n"
+              component={I18nScreen}
+              options={{
+                title: 'i18n'
               }}
             />
             <Stack.Screen

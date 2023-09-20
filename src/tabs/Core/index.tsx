@@ -22,6 +22,10 @@ export default function CoreScreen({
       screen: 'Zustand'
     },
     {
+      label: 'i18n',
+      screen: 'I18n'
+    },
+    {
       label: 'Charts',
       screen: 'Charts'
     },

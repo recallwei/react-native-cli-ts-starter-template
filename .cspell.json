@@ -21,6 +21,7 @@
     "vendor",
     "node_modules",
     "pnpm-lock.yaml",
-    "README.md"
+    "README.md",
+    "locales"
   ]
 }
