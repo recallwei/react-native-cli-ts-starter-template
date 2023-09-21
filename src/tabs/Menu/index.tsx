@@ -6,16 +6,17 @@ import {
   ServerCog,
   Gem,
   Compass,
-  Users
+  Users,
+  Component
 } from '@tamagui/lucide-icons'
-import { useToastController } from '@tamagui/toast'
+// import { useToastController } from '@tamagui/toast'
 
 import { MenuItemCard } from '@/components'
 import { useAuthStore } from '@/store'
 import { AuthUtils } from '@/utils'
 
 export default function MenuScreen(): React.JSX.Element {
-  const { show } = useToastController()
+  // const { show } = useToastController()
 
   const authStore = useAuthStore()
 
@@ -25,7 +26,7 @@ export default function MenuScreen(): React.JSX.Element {
   }
 
   const featureNotFinished = () => {
-    show('This feature have not finished yet!')
+    // show('This feature have not finished yet!')
     // setTimeout(() => {
     //   hide()
     // }, 1500)
@@ -55,7 +56,7 @@ export default function MenuScreen(): React.JSX.Element {
       <MenuItemCard
         title="Services"
         description="Official services we provide"
-        icon={Settings}
+        icon={Component}
       />
       <MenuItemCard
         title="Support"
