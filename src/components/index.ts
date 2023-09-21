@@ -1,1 +1,2 @@
 export { default as TabBar } from './TabBar'
+export { default as MenuItemCard, type MenuItemCardProps } from './MenuItemCard'

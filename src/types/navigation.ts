@@ -15,6 +15,10 @@ export type RootStackParamList = {
   AsyncStorage: undefined
   Charts: undefined
   Dayjs: undefined
+  // Don't need auth
+  Login: undefined
+  SignUp: undefined
+  ForgotPassword: undefined
 }
 
 export type RootStackScreenProps<T extends keyof RootStackParamList> =

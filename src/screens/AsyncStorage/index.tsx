@@ -2,10 +2,7 @@ import { useEffect, useState } from 'react'
 import { Text } from 'react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { Button, YStack, Input } from 'tamagui'
-import type {
-  NativeSyntheticEvent,
-  TextInputChangeEventData
-} from 'react-native'
+
 import { TextStyles } from '@/styles'
 
 export default function AsyncStorageScreen(): React.JSX.Element {
@@ -13,7 +10,7 @@ export default function AsyncStorageScreen(): React.JSX.Element {
   const [value, setValue] = useState('')
 
   useEffect(() => {
-    getData().catch(() => {})
+    getData()
   }, [])
 
   async function getData() {
@@ -50,9 +47,6 @@ export default function AsyncStorageScreen(): React.JSX.Element {
     }
   }
 
-  const onChangeValue = (e: NativeSyntheticEvent<TextInputChangeEventData>) =>
-    setValue(e.nativeEvent.text)
-
   return (
     <YStack
       rowGap="$3"
@@ -79,7 +73,7 @@ export default function AsyncStorageScreen(): React.JSX.Element {
       <Input
         width="$16"
         value={value}
-        onChange={onChangeValue}
+        onChangeText={(text: string) => setValue(text)}
       />
       <Button
         width="$16"

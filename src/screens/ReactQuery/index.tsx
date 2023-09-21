@@ -15,7 +15,7 @@ export default function ReactQueryScreen(): React.JSX.Element {
 
   useFocusEffect(
     useCallback(() => {
-      refetch().catch(() => {})
+      refetch()
     }, [refetch])
   )
 

@@ -14,19 +14,16 @@ const resources = {
   }
 } as const
 
-i18n
-  .use(initReactI18next)
-  .init({
-    lng: 'en',
-    defaultNS: 'global',
-    fallbackLng: 'en',
-    interpolation: {
-      escapeValue: false
-    },
-    resources,
-    compatibilityJSON: 'v3' // For compatibility on React Native
-  })
-  .catch(() => {})
+i18n.use(initReactI18next).init({
+  lng: 'en',
+  defaultNS: 'global',
+  fallbackLng: 'en',
+  interpolation: {
+    escapeValue: false
+  },
+  resources,
+  compatibilityJSON: 'v3' // For compatibility on React Native
+})
 
 export const changeLanguage = async (lang: Lang) => {
   await i18n.changeLanguage(lang)
