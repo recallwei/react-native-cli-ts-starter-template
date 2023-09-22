@@ -8,5 +8,11 @@
     "Core": "Core",
     "UI": "UI",
     "Menu": "Menu"
+  },
+  "Screens": {
+    "Home": "Home",
+    "Core": "Core",
+    "UI": "UI",
+    "Menu": "Menu"
   }
 }

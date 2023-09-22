@@ -14,27 +14,30 @@ import { useCounterStore } from '@/store'
 const Tab = createBottomTabNavigator<HomeTabParamList>()
 
 export default function TabBar(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark'
+  const isDarkMode = useColorScheme() === 'light'
   const { count } = useCounterStore()
   const { t } = useTranslation('global')
   return (
     <Tab.Navigator
+      sceneContainerStyle={{
+        backgroundColor: isDarkMode ? '#000' : '#fff'
+      }}
       screenOptions={() => ({
-        headerShown: true,
+        headerShown: false,
         headerTintColor: 'white',
         headerBackTitleStyle: GlobalStyles.headerBackTitle,
         headerStyle: {
           backgroundColor: '#0078d7'
         },
         headerTitleStyle: GlobalStyles.headerTitle,
-        contentStyle: {
-          backgroundColor: isDarkMode ? '#000' : '#fff'
-        },
         tabBarLabelStyle: GlobalStyles.tabBarLabel,
         tabBarActiveTintColor: '#0078d7',
         tabBarInactiveTintColor: 'gray',
         tabBarIconStyle: {
           fontSize: 10
+        },
+        tabBarItemStyle: {
+          backgroundColor: isDarkMode ? '#000' : '#fff'
         }
       })}
     >
@@ -42,6 +45,7 @@ export default function TabBar(): React.JSX.Element {
         name="Home"
         component={HomeScreen}
         options={{
+          headerTitle: t('Screens.Home'),
           tabBarLabel: t('Tabs.Home'),
           tabBarIcon: ({ color, size }) => (
             <Home
@@ -55,6 +59,7 @@ export default function TabBar(): React.JSX.Element {
         name="Core"
         component={CoreScreen}
         options={{
+          headerTitle: t('Screens.Core'),
           tabBarLabel: t('Tabs.Core'),
           tabBarBadge: count > 0 ? count : undefined,
           tabBarIcon: ({ color, size }) => (
@@ -69,6 +74,7 @@ export default function TabBar(): React.JSX.Element {
         name="TamaguiUI"
         component={TamaguiUIScreen}
         options={{
+          headerTitle: t('Screens.UI'),
           tabBarLabel: t('Tabs.UI'),
           tabBarIcon: ({ color, size }) => (
             <Palette
@@ -82,6 +88,7 @@ export default function TabBar(): React.JSX.Element {
         name="Menu"
         component={MenuScreen}
         options={{
+          headerTitle: t('Screens.Menu'),
           tabBarLabel: t('Tabs.Menu'),
           tabBarIcon: ({ color, size }) => (
             <Menu

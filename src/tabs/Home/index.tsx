@@ -1,10 +1,10 @@
-import { View, Text, Image } from 'react-native'
+import { Text, Image, SafeAreaView } from 'react-native'
 
 import { TextStyles } from '@/styles'
 
 export default function HomeScreen() {
   return (
-    <View
+    <SafeAreaView
       style={{
         margin: 10
       }}
@@ -23,6 +23,6 @@ export default function HomeScreen() {
       >
         Hello, React Native!
       </Text>
-    </View>
+    </SafeAreaView>
   )
 }

@@ -11,11 +11,13 @@ import {
   Label
 } from 'tamagui'
 import { Atom, User, Lock, Check } from '@tamagui/lucide-icons'
+import { useTranslation } from 'react-i18next'
 
 import { AuthAPI } from '@/api'
 import { useAuthStore } from '@/store'
 
 export default function LoginScreen(): React.JSX.Element {
+  const { t } = useTranslation('auth')
   const authStore = useAuthStore()
   const [formData, setFormData] = useState({
     account: '',
@@ -67,7 +69,8 @@ export default function LoginScreen(): React.JSX.Element {
           width="100%"
           maxLength={16}
           paddingLeft="$8"
-          placeholder="Please enter the account"
+          placeholder={t('Account.Placeholder')}
+          autoCapitalize="none"
           value={formData.account}
           onChangeText={(text) => {
             setFormData((prev) => ({
@@ -93,7 +96,8 @@ export default function LoginScreen(): React.JSX.Element {
           width="100%"
           maxLength={16}
           paddingLeft="$8"
-          placeholder="Please enter the password"
+          placeholder={t('Password.Placeholder')}
+          autoCapitalize="none"
           value={formData.password}
           onChangeText={(text) => {
             setFormData((prev) => ({
@@ -127,14 +131,14 @@ export default function LoginScreen(): React.JSX.Element {
           </Checkbox.Indicator>
         </Checkbox>
 
-        <Label>Remember password</Label>
+        <Label>{t('RememberPassword')}</Label>
       </XStack>
 
       <Button
         width="100%"
         onPress={handleLogin}
       >
-        Login
+        {t('Login')}
       </Button>
     </YStack>
   )

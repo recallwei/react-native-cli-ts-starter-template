@@ -74,6 +74,7 @@ export default function AsyncStorageScreen(): React.JSX.Element {
         width="$16"
         value={value}
         onChangeText={(text: string) => setValue(text)}
+        autoCapitalize="none"
       />
       <Button
         width="$16"

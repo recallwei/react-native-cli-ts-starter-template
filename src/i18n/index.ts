@@ -1,17 +1,13 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
-import enGlobal from '@/locales/en/global.json'
-import frGlobal from '@/locales/fr/global.json'
+import { EN, FR, ZH_CN } from '@/locales'
 import type { Lang } from '@/types/lang'
 
 const resources = {
-  en: {
-    global: enGlobal
-  },
-  fr: {
-    global: frGlobal
-  }
+  en: EN,
+  fr: FR,
+  zh_cn: ZH_CN
 } as const
 
 i18n.use(initReactI18next).init({

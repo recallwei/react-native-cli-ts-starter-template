@@ -1,97 +1,80 @@
-import { Text, View, FlatList } from 'react-native'
-import { ListItem, YGroup } from 'tamagui'
-import { Star, Moon, Sun, Cloud } from '@tamagui/lucide-icons'
+import { YStack, ScrollView } from 'tamagui'
+import { Component } from '@tamagui/lucide-icons'
 
 import type { HomeTabScreenProps, NavigationItem } from '@/types'
-import { TextStyles } from '@/styles'
+import { MenuItemCard } from '@/components'
+import { SafeAreaView } from 'react-native'
+
+interface CoreNavigationItem extends NavigationItem {
+  description?: string
+  icon?: any
+}
 
 export default function CoreScreen({
   navigation
 }: HomeTabScreenProps<'Core'>): React.JSX.Element {
-  const navigationList: NavigationItem[] = [
+  const navigationList: CoreNavigationItem[] = [
     {
       label: 'Tamagui UI',
-      screen: 'TamaguiUI'
+      description: 'UI',
+      screen: 'TamaguiUI',
+      icon: Component
     },
     {
       label: 'React Query',
-      screen: 'ReactQuery'
+      description: 'Request state management',
+      screen: 'ReactQuery',
+      icon: Component
     },
     {
       label: 'Zustand',
-      screen: 'Zustand'
+      description: 'Global state management',
+      screen: 'Zustand',
+      icon: Component
     },
     {
       label: 'i18n',
-      screen: 'I18n'
+      description: 'Internationalization',
+      screen: 'I18n',
+      icon: Component
     },
     {
       label: 'Async Storage',
-      screen: 'AsyncStorage'
+      description: 'Async local storage for React Native',
+      screen: 'AsyncStorage',
+      icon: Component
     },
     {
       label: 'Charts',
-      screen: 'Charts'
+      description: 'Chart components',
+      screen: 'Charts',
+      icon: Component
     },
     {
       label: 'day.js',
-      screen: 'Dayjs'
+      description: 'Time & Date utils',
+      screen: 'Dayjs',
+      icon: Component
     }
   ]
   return (
-    <View>
-      <FlatList
-        data={navigationList}
-        renderItem={({ item }) => (
-          <Text
-            onPress={() => navigation.navigate(item.screen)}
-            style={TextStyles.base}
-          >
-            {item.label}
-          </Text>
-        )}
-        keyExtractor={(item) => item.screen}
-      />
-
-      <YGroup
-        alignSelf="center"
-        bordered
-        width={240}
-        size="$4"
-      >
-        <YGroup.Item>
-          <ListItem
-            hoverTheme
-            icon={Star}
-            title="Star"
-            subTitle="Twinkles"
-          />
-        </YGroup.Item>
-        <YGroup.Item>
-          <ListItem
-            hoverTheme
-            icon={Moon}
-          >
-            Moon
-          </ListItem>
-        </YGroup.Item>
-        <YGroup.Item>
-          <ListItem
-            hoverTheme
-            icon={Sun}
-          >
-            Sun
-          </ListItem>
-        </YGroup.Item>
-        <YGroup.Item>
-          <ListItem
-            hoverTheme
-            icon={Cloud}
-          >
-            Cloud
-          </ListItem>
-        </YGroup.Item>
-      </YGroup>
-    </View>
+    <SafeAreaView>
+      <ScrollView>
+        <YStack
+          padding="$4"
+          space="$2"
+        >
+          {navigationList.map((item) => (
+            <MenuItemCard
+              key={item.label}
+              title={item.label}
+              description={item.description}
+              icon={Component}
+              onPress={() => navigation.navigate(item.screen)}
+            />
+          ))}
+        </YStack>
+      </ScrollView>
+    </SafeAreaView>
   )
 }

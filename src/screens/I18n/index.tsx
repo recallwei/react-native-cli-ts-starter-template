@@ -21,6 +21,10 @@ export default function I18nScreen(): React.JSX.Element {
     {
       name: 'Français',
       value: 'fr'
+    },
+    {
+      name: '简体中文',
+      value: 'zh_cn'
     }
   ]
 

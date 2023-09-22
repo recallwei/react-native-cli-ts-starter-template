@@ -23,7 +23,7 @@ import type { RootStackParamList } from '@/types'
 const Stack = createNativeStackNavigator<RootStackParamList>()
 
 export default function Navigation(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark'
+  const isDarkMode = useColorScheme() === 'light'
   const { isLogin, isLoading, loaded } = useAuthStore()
 
   useEffect(() => {
@@ -47,7 +47,8 @@ export default function Navigation(): React.JSX.Element {
             headerTitleStyle: GlobalStyles.headerTitle,
             contentStyle: {
               backgroundColor: isDarkMode ? '#000' : '#fff'
-            }
+            },
+            animation: 'slide_from_right'
           }}
         >
           {isLogin ? (

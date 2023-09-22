@@ -1,4 +1,4 @@
-import { YStack } from 'tamagui'
+import { YStack, ScrollView } from 'tamagui'
 import {
   Power,
   UserCog,
@@ -14,6 +14,7 @@ import {
 import { MenuItemCard } from '@/components'
 import { useAuthStore } from '@/store'
 import { AuthUtils } from '@/utils'
+import { SafeAreaView } from 'react-native'
 
 export default function MenuScreen(): React.JSX.Element {
   // const { show } = useToastController()
@@ -33,52 +34,56 @@ export default function MenuScreen(): React.JSX.Element {
   }
 
   return (
-    <YStack
-      padding="$4"
-      space="$2"
-    >
-      <MenuItemCard
-        title="System"
-        description="System configuration"
-        icon={ServerCog}
-        onPress={featureNotFinished}
-      />
-      <MenuItemCard
-        title="Account"
-        description="User profile"
-        icon={UserCog}
-      />
-      <MenuItemCard
-        title="Settings"
-        description="Personal custom settings"
-        icon={Settings}
-      />
-      <MenuItemCard
-        title="Services"
-        description="Official services we provide"
-        icon={Component}
-      />
-      <MenuItemCard
-        title="Support"
-        description="Official supports"
-        icon={Gem}
-      />
-      <MenuItemCard
-        title="Explore"
-        description="Explore something new"
-        icon={Compass}
-      />
-      <MenuItemCard
-        title="Community"
-        description="Join the community"
-        icon={Users}
-      />
-      <MenuItemCard
-        title="Logout"
-        description="Log out and back to login"
-        icon={Power}
-        onPress={logout}
-      />
-    </YStack>
+    <SafeAreaView>
+      <ScrollView>
+        <YStack
+          padding="$4"
+          space="$2"
+        >
+          <MenuItemCard
+            title="System"
+            description="System configuration"
+            icon={ServerCog}
+            onPress={featureNotFinished}
+          />
+          <MenuItemCard
+            title="Account"
+            description="User profile"
+            icon={UserCog}
+          />
+          <MenuItemCard
+            title="Settings"
+            description="Personal custom settings"
+            icon={Settings}
+          />
+          <MenuItemCard
+            title="Services"
+            description="Official services we provide"
+            icon={Component}
+          />
+          <MenuItemCard
+            title="Support"
+            description="Official supports"
+            icon={Gem}
+          />
+          <MenuItemCard
+            title="Explore"
+            description="Explore something new"
+            icon={Compass}
+          />
+          <MenuItemCard
+            title="Community"
+            description="Join the community"
+            icon={Users}
+          />
+          <MenuItemCard
+            title="Logout"
+            description="Log out and back to login"
+            icon={Power}
+            onPress={logout}
+          />
+        </YStack>
+      </ScrollView>
+    </SafeAreaView>
   )
 }

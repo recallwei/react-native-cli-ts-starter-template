@@ -1,11 +1,11 @@
-import { Text, View } from 'react-native'
+import { Text, SafeAreaView } from 'react-native'
 
 import { TextStyles } from '@/styles'
 
 export default function TamaguiUIScreen(): React.JSX.Element {
   return (
-    <View>
+    <SafeAreaView>
       <Text style={TextStyles.base}>Tamagui UI</Text>
-    </View>
+    </SafeAreaView>
   )
 }
