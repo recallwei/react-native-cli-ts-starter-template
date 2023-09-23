@@ -62,7 +62,7 @@ export default function CoreScreen({
       <ScrollView>
         <YStack
           padding="$4"
-          space="$2"
+          space="$3"
         >
           {navigationList.map((item) => (
             <MenuItemCard

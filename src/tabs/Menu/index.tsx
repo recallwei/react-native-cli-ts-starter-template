@@ -38,7 +38,7 @@ export default function MenuScreen(): React.JSX.Element {
       <ScrollView>
         <YStack
           padding="$4"
-          space="$2"
+          space="$3"
         >
           <MenuItemCard
             title="System"
