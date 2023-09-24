@@ -18,7 +18,7 @@ export default function App(): JSX.Element {
   return (
     <TamaguiProvider
       config={config}
-      defaultTheme="dark"
+      defaultTheme="light"
     >
       <QueryClientProvider client={queryClient}>
         {/* <GlobalToastProvider> */}

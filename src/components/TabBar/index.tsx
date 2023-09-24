@@ -1,4 +1,3 @@
-import { useColorScheme } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Home, Menu, Palette, Star } from '@tamagui/lucide-icons'
 import { useTranslation } from 'react-i18next'
@@ -14,14 +13,10 @@ import { useCounterStore } from '@/store'
 const Tab = createBottomTabNavigator<HomeTabParamList>()
 
 export default function TabBar(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'light'
   const { count } = useCounterStore()
   const { t } = useTranslation('global')
   return (
     <Tab.Navigator
-      sceneContainerStyle={{
-        backgroundColor: isDarkMode ? '#000' : '#fff'
-      }}
       screenOptions={() => ({
         headerShown: false,
         headerTintColor: 'white',
@@ -35,9 +30,6 @@ export default function TabBar(): React.JSX.Element {
         tabBarInactiveTintColor: 'gray',
         tabBarIconStyle: {
           fontSize: 10
-        },
-        tabBarItemStyle: {
-          backgroundColor: isDarkMode ? '#000' : '#fff'
         }
       })}
     >

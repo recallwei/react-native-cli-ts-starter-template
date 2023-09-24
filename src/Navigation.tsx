@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import { useColorScheme } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
@@ -23,7 +22,6 @@ import type { RootStackParamList } from '@/types'
 const Stack = createNativeStackNavigator<RootStackParamList>()
 
 export default function Navigation(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'light'
   const { isLogin, isLoading, loaded } = useAuthStore()
 
   useEffect(() => {
@@ -39,15 +37,12 @@ export default function Navigation(): React.JSX.Element {
       ) : (
         <Stack.Navigator
           screenOptions={{
-            headerTintColor: 'white',
+            headerTintColor: '#ffffff',
             headerBackTitleStyle: GlobalStyles.headerBackTitle,
             headerStyle: {
               backgroundColor: '#0078d7'
             },
             headerTitleStyle: GlobalStyles.headerTitle,
-            contentStyle: {
-              backgroundColor: isDarkMode ? '#000' : '#fff'
-            },
             animation: 'slide_from_right'
           }}
         >
