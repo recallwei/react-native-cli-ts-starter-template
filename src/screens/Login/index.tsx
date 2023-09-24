@@ -28,7 +28,9 @@ export default function LoginScreen(): React.JSX.Element {
 
   const { mutate } = useMutation({
     mutationFn: () => AuthAPI.login(),
-    onSuccess: () => {},
+    onSuccess: (data) => {
+      console.log(data)
+    },
     onError: (error) => {
       console.log(error)
       authStore.login()
@@ -43,7 +45,6 @@ export default function LoginScreen(): React.JSX.Element {
     <YStack
       space="$4"
       padding="$6"
-      paddingBottom="$12"
       justifyContent="center"
       alignItems="center"
       height="100%"
