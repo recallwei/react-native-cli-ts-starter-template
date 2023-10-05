@@ -1,7 +1,7 @@
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useEffect, useState } from 'react'
 import { Text } from 'react-native'
-import AsyncStorage from '@react-native-async-storage/async-storage'
-import { Button, YStack, Input } from 'tamagui'
+import { Button, Input, YStack } from 'tamagui'
 
 import { TextStyles } from '@/styles'
 
@@ -10,7 +10,7 @@ export default function AsyncStorageScreen(): React.JSX.Element {
   const [value, setValue] = useState('')
 
   useEffect(() => {
-    getData()
+    getData().catch(() => {})
   }, [])
 
   async function getData() {
@@ -66,7 +66,9 @@ export default function AsyncStorageScreen(): React.JSX.Element {
       </Text>
       <Button
         width="$16"
-        onPress={async () => getData()}
+        onPress={() => {
+          getData().catch(() => {})
+        }}
       >
         Get
       </Button>
@@ -78,13 +80,17 @@ export default function AsyncStorageScreen(): React.JSX.Element {
       />
       <Button
         width="$16"
-        onPress={async () => storeData(value)}
+        onPress={() => {
+          storeData(value).catch(() => {})
+        }}
       >
         Set
       </Button>
       <Button
         width="$16"
-        onPress={async () => clearData()}
+        onPress={() => {
+          clearData().catch(() => {})
+        }}
       >
         Clear
       </Button>

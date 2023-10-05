@@ -1,17 +1,17 @@
+import { Atom, Check, Lock, User } from '@tamagui/lucide-icons'
 import { useMutation } from '@tanstack/react-query'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import {
   Button,
-  Input,
-  YStack,
-  Text,
-  XStack,
-  View,
   Checkbox,
-  Label
+  Input,
+  Label,
+  Text,
+  View,
+  XStack,
+  YStack
 } from 'tamagui'
-import { Atom, User, Lock, Check } from '@tamagui/lucide-icons'
-import { useTranslation } from 'react-i18next'
 
 import { AuthAPI } from '@/api'
 import { useAuthStore } from '@/store'

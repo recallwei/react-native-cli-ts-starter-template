@@ -1,22 +1,22 @@
-import { useEffect } from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { useEffect } from 'react'
 
-import { GlobalStyles } from '@/styles'
 import { TabBar } from '@/components'
 import {
-  DayjsScreen,
-  ChartsScreen,
-  ZustandScreen,
-  ReactQueryScreen,
-  I18nScreen,
   AsyncStorageScreen,
-  LoginScreen,
-  SignUpScreen,
+  ChartsScreen,
+  DayjsScreen,
   ForgotPasswordScreen,
-  SplashScreen
+  I18nScreen,
+  LoginScreen,
+  ReactQueryScreen,
+  SignUpScreen,
+  SplashScreen,
+  ZustandScreen
 } from '@/screens'
 import { useAuthStore } from '@/store'
+import { GlobalStyles } from '@/styles'
 import type { RootStackParamList } from '@/types'
 
 const Stack = createNativeStackNavigator<RootStackParamList>()

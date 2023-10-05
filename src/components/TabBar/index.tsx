@@ -2,13 +2,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Home, Menu, Palette, Star } from '@tamagui/lucide-icons'
 import { useTranslation } from 'react-i18next'
 
-import { GlobalStyles } from '@/styles'
-import type { HomeTabParamList } from '@/types'
-import HomeScreen from '@/tabs/Home'
-import CoreScreen from '@/tabs/Core'
-import TamaguiUIScreen from '@/tabs/TamaguiUI'
-import MenuScreen from '@/tabs/Menu'
 import { useCounterStore } from '@/store'
+import { GlobalStyles } from '@/styles'
+import CoreScreen from '@/tabs/Core'
+import HomeScreen from '@/tabs/Home'
+import MenuScreen from '@/tabs/Menu'
+import TamaguiUIScreen from '@/tabs/TamaguiUI'
+import type { HomeTabParamList } from '@/types'
 
 const Tab = createBottomTabNavigator<HomeTabParamList>()
 

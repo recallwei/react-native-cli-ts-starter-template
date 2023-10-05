@@ -1,4 +1,4 @@
-import { YStack, Spinner } from 'tamagui'
+import { Spinner, YStack } from 'tamagui'
 
 export default function SplashScreen(): React.JSX.Element {
   return (

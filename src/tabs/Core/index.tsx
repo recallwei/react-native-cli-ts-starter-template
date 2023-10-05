@@ -1,9 +1,9 @@
-import { YStack, ScrollView } from 'tamagui'
 import { Component } from '@tamagui/lucide-icons'
-
-import type { HomeTabScreenProps, NavigationItem } from '@/types'
-import { MenuItemCard } from '@/components'
 import { SafeAreaView } from 'react-native'
+import { ScrollView, YStack } from 'tamagui'
+
+import { MenuItemCard } from '@/components'
+import type { HomeTabScreenProps, NavigationItem } from '@/types'
 
 interface CoreNavigationItem extends NavigationItem {
   description?: string

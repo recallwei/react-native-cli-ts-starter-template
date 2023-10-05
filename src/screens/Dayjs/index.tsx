@@ -1,7 +1,7 @@
 import { Text, View } from 'react-native'
 
-import { TimeUtils } from '@/utils'
 import { TextStyles } from '@/styles'
+import { TimeUtils } from '@/utils'
 
 export default function DayjsScreen(): React.JSX.Element {
   return (

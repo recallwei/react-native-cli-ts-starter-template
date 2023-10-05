@@ -7,7 +7,7 @@ export interface NavigationItem {
   screen: keyof (RootStackParamList & HomeTabParamList)
 }
 
-export type RootStackParamList = {
+export interface RootStackParamList {
   Tabs: undefined
   ReactQuery: undefined
   Zustand: undefined
@@ -24,7 +24,7 @@ export type RootStackParamList = {
 export type RootStackScreenProps<T extends keyof RootStackParamList> =
   NativeStackScreenProps<RootStackParamList, T>
 
-export type HomeTabParamList = {
+export interface HomeTabParamList {
   Home: undefined
   Core: undefined
   TamaguiUI: undefined

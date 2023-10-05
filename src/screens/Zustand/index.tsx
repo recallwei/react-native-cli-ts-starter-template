@@ -1,9 +1,9 @@
+import { Minus, Plus } from '@tamagui/lucide-icons'
 import { Text } from 'react-native'
 import { Button, XStack } from 'tamagui'
-import { Plus, Minus } from '@tamagui/lucide-icons'
 
-import { TextStyles } from '@/styles'
 import { useCounterStore } from '@/store'
+import { TextStyles } from '@/styles'
 
 export default function ZustandScreen(): React.JSX.Element {
   const { increment, decrement, count } = useCounterStore()

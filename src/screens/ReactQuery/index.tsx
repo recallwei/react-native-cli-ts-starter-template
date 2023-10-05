@@ -1,7 +1,7 @@
-import { useCallback } from 'react'
-import { Text, ScrollView } from 'react-native'
 import { useFocusEffect } from '@react-navigation/native'
 import { useQuery } from '@tanstack/react-query'
+import { useCallback } from 'react'
+import { ScrollView, Text } from 'react-native'
 
 import { TestAPI } from '@/api'
 import { TextStyles } from '@/styles'
@@ -15,7 +15,7 @@ export default function ReactQueryScreen(): React.JSX.Element {
 
   useFocusEffect(
     useCallback(() => {
-      refetch()
+      refetch().catch(() => {})
     }, [refetch])
   )
 

@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import { Text } from 'react-native'
-import { useTranslation } from 'react-i18next'
-import { YStack, Select, Adapt, Sheet } from 'tamagui'
 import { Check, ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { Text } from 'react-native'
+import { Adapt, Select, Sheet, YStack } from 'tamagui'
 
-import { TextStyles } from '@/styles'
 import { changeLanguage } from '@/i18n'
+import { TextStyles } from '@/styles'
 import type { Lang } from '@/types/lang'
 
 export default function I18nScreen(): React.JSX.Element {
@@ -50,7 +50,9 @@ export default function I18nScreen(): React.JSX.Element {
 
       <Select
         value={currentLang}
-        onValueChange={onChangeLanguage}
+        onValueChange={() => {
+          onChangeLanguage().catch(() => {})
+        }}
         disablePreventBodyScroll
       >
         <Select.Trigger

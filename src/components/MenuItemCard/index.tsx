@@ -1,6 +1,6 @@
-import { YStack, Card, View, Paragraph, XStack, H3 } from 'tamagui'
 import { ChevronRight, Menu } from '@tamagui/lucide-icons'
 import { useState } from 'react'
+import { Card, H3, Paragraph, View, XStack, YStack } from 'tamagui'
 
 interface Props {
   title?: string

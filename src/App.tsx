@@ -1,16 +1,21 @@
-import { useNavigationContainerRef } from '@react-navigation/native'
+import './i18n'
+
 import { useFlipper } from '@react-navigation/devtools'
+import {
+  NavigationContainer,
+  useNavigationContainerRef
+} from '@react-navigation/native'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { useState } from 'react'
 import FlipperAsyncStorage from 'rn-flipper-async-storage-advanced'
-import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import { TamaguiProvider } from 'tamagui'
 
 // import { GlobalToastProvider } from '@/providers'
 import config from '../tamagui.config'
-import './i18n'
 import Navigation from './Navigation'
 
 export default function App(): JSX.Element {
-  const queryClient = new QueryClient()
+  const [queryClient] = useState(() => new QueryClient())
 
   const navigationRef = useNavigationContainerRef()
   useFlipper(navigationRef)
@@ -22,7 +27,9 @@ export default function App(): JSX.Element {
     >
       <QueryClientProvider client={queryClient}>
         {/* <GlobalToastProvider> */}
-        <Navigation />
+        <NavigationContainer ref={navigationRef}>
+          <Navigation />
+        </NavigationContainer>
         {/* </GlobalToastProvider> */}
       </QueryClientProvider>
       <FlipperAsyncStorage />
